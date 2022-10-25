@@ -20,4 +20,14 @@ A list can be found here: https://raw.githubusercontent.com/rstudio/cheatsheets/
 * R indicates it is ready for a command with this symbol: > 
 * To interrupt a command that is stuck or if you have a typo and can't get > back, hit ESC
 * Jump between script and console panes with Ctrl + l and Ctrl + 2
+* Assignment operator: Alt + - (PC), Option + - (Mac)
+
+
+## Creating objects in R
+
+```
+3 + 5
+12 / 7
+
+weight_kg <- 55
 

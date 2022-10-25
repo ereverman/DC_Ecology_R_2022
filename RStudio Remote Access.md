@@ -22,4 +22,3 @@ If after logging on you reach an Untitled.ipynb and you do not see the option to
  * Click New Launcher
  * Click RStudio (located under Notebook)
 
-## Troubleshooting: Data isn't accessible

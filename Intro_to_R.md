@@ -7,5 +7,17 @@
 5. Download the code handout:
 
 ```
-download.url
+download.file("https://datacarpentry.org/R-ecology-lesson/code-handout.R", "data-carpentry/data-carpentry-script.R")
+
+# This command downloads the code handout to the data-carpentry directory and saves it in that location as data-carpentry-script.R
 ```
+
+### Helpful short-cuts and hints:
+A list can be found here: https://raw.githubusercontent.com/rstudio/cheatsheets/main/rstudio-ide.pdf
+
+* Execute commands: Ctrl + Enter (PC), Cmd + Enter (Mac)
+* Tab to complete partially typed commands, variable names, and paths
+* R indicates it is ready for a command with this symbol: > 
+* To interrupt a command that is stuck or if you have a typo and can't get > back, hit ESC
+* Jump between script and console panes with Ctrl + l and Ctrl + 2
+

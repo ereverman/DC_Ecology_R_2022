@@ -133,7 +133,27 @@ animals[animals %in% c("rat", "cat", "dog", "duck", "goat", "bird", "fish")]  # 
 
 #### Missing data:
 
+R recognizes missing data coded as NA. Many functions will not run properly if the vector or dataset contains missing information, but NA's are necessary to retain in the original dataset (it's bad practice to leave cells blank in your datasheet).
 
+```
+heights <- c(2, 4, 4, NA, 6)
+mean(heights)
+max(heights)
+mean(heights, na.rm = TRUE)
+max(heights, na.rm = TRUE)
+
+## Extract those elements which are not missing values.
+heights[!is.na(heights)]
+
+## Returns the object with incomplete cases removed.
+#The returned object is an atomic vector of type `"numeric"` (or #`"double"`).
+na.omit(heights)
+
+## Extract those elements which are complete cases.
+#The returned object is an atomic vector of type `"numeric"` (or #`"double"`).
+heights[complete.cases(heights)]
+
+```
 
 
 

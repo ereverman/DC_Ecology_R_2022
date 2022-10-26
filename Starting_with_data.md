@@ -144,5 +144,54 @@ as.numeric(levels(year_fct))[year_fct]  # this is the recommended way, less pron
 
 We often record data using abreviations or by stringing words together with CamelCase or "." or "_".
 
-
 ```
+# Publication quality graphics require relabeling of factor levels occasionally
+plot(surveys$sex)     # barplot of number of females and males captured during the experiment
+
+# This doesn't show the entries that are missing information:
+sex <- surveys$sex
+levels(sex)
+
+sex <- addNA(sex)
+levels(sex)
+
+head(sex)
+levels(sex)[3] <- "undetermined"
+levels(sex)
+
+plot(surveys$sex)
+```
+
+#### Formatting dates:
+
+Information stored as dates is very common in datasets, but people often store this information in different ways. The universal convention is YYYYMMDD.
+
+ ```
+ str(surveys)     # we have separate columns for year month and day
+ 
+ library(lubridate)   # contains many functions to help handle date data
+ 
+ # create a date object:
+ my_date <- ymd("2015-01-01")  # january 1 2015
+ str(my_date)
+ 
+ # we can use "paste" to combine the elements of a date:
+ my_date <- ymd(paste("2015", "1","1", sep = "-"))
+ str(my_date)
+ 
+ # use the same syntax to combine date information from several columns:
+ paste(surveys$year, surveys$month, surveys$day, sep = "-")   # there is a warning caused by missing data
+ 
+ # add the new date information to the dataframe:
+ surveys$date <- ymd(paste(surveys$year, surveys$month, surveys$day, sep = "-"))
+ str(surveys)
+ summary(surveys)
+ 
+ 
+ # investigate unparsed dates:
+ missing_dates <- surveys[is.na(surveys$date), c("year", "month", "day)] # subset rows with NA and only the three named columns
+ head(missing_dates)
+ 
+ ```
+ The problem here is caused by a data input error. There aren't 31 days in April or September, so something went wrong when recording the data. If you can't track down the error and confirm the correction, it may be best to recode these data as missing. Always document the change.
+ 

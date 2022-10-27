@@ -23,6 +23,16 @@ ERE instructor notes for DC Ecology R workshop 2022
  * Navigate to Downloads on your computer
  * Decompress the downloaded directory (this should contain all of your work)
 
+## Helpful links:
+
+* Executive summary of links you will need:
+* Remote computing site: https://jupyter.lib.ku.edu (directions below)
+* Zoom info: https://kansas.zoom.us/j/93476934554 Passcode: 255597
+* Workshop site: https://kulibraries.github.io/2022-10-28-ku-r-online/
+* Workshop Etherpad: https://pad.carpentries.org/2022-10-28-ku-r-online
+* Lesson site: https://datacarpentry.org/R-ecology-lesson/
+ 
+
 ## Troubleshooting:
 
 ###  RStudio isn't visible

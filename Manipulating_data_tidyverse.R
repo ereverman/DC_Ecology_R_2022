@@ -21,6 +21,12 @@ na.omit(surveys[surveys$"sex" == "F" & surveys$weight < 5, c("species_id", "sex"
 
 # Breaking commands into steps can make code easier to read and reproduce, which should be one of our goals as we do data analysis.
 
+# The data we collect aren't always immediately ready for analysis:
+  # The equipment outputs data in a specific format
+  # Datasheets are printed to help with data collection not with data analysis (not necessarily anyway)
+  # Even if the raw data can be analyzed one way, sometimes they need to be reformatted to work with a different analysis or question
+
+
 # Tidyverse
   # A package of packages: it contains within it several other packages that all use the same syntax
   # Developed by the Hadley Wickham group: https://r4ds.had.co.nz/index.html
@@ -431,3 +437,4 @@ dim(surveys_complete)
 
 # Write file:
 write_csv(surveys_complete, file = "data/surveys_complete.csv")
+###

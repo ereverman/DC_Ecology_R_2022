@@ -2,6 +2,8 @@
 
 # Welcome back:----
 
+# OPEN A NEW SCRIPT AND SAVE: ManipulatingData
+
 # Check-in, thumbs up if you are still logged on, thumbs down if not
 # Let's reload the data 
 
